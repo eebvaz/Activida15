@@ -1,12 +1,16 @@
 ﻿
 Console.WriteLine("Ingrese su edad: ");
 int edad =0;
-bool correcto;
+bool correcto=false;
 
 
 do
 {
     if (int.TryParse(Console.ReadLine(), out edad))
+    {
+     correcto = true;
+    }
+    else
     {
         Console.WriteLine("No es valido");
         Console.ReadKey();
@@ -17,7 +21,7 @@ do
 Console.WriteLine("Es valido");
 
  Console.WriteLine("");
-Console.WriteLine("Validad edad: ");
+
 
 if (edad >= 1 && edad < 120)
 {
